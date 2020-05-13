@@ -1,0 +1,540 @@
+{
+    "vmanage_policy_lists": [
+        {
+            "listId": "aee21685-ec26-42f3-9bf2-b3e4d4c0f4a0",
+            "name": "Corp-VPN-List",
+            "type": "vpn",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "vpn": "{{config.Service_VPNs}}"
+                }
+            ],
+            "lastUpdated": 1588897225660,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 1,
+            "references": [
+                {
+                    "id": "69f09de1-2bd2-499d-857b-ca47eb2c4547",
+                    "type": "hubAndSpoke"
+                }
+            ],
+            "isActivatedByVsmart": false
+        },
+        {
+            "listId": "972f389a-715f-4a1e-8b00-62dc1d519b3a",
+            "name": "DC2-Site-list",
+            "type": "site",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "siteId": "{{config.DC2_site_id}}"
+                }
+            ],
+            "lastUpdated": 1588897226745,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 4,
+            "references": [
+                {
+                    "id": "aaad903a-00f4-458b-9d99-87cd96f04b6f",
+                    "type": ""
+                },
+                {
+                    "id": "69f09de1-2bd2-499d-857b-ca47eb2c4547",
+                    "type": "hubAndSpoke"
+                },
+                {
+                    "id": "c23780da-f90b-44ea-8fbe-afe4bd740ffc",
+                    "type": "control"
+                },
+                {
+                    "id": "1f0a6905-1747-4ca8-a621-766934a3e084",
+                    "type": "control"
+                }
+            ],
+            "isActivatedByVsmart": false
+        },
+        {
+            "listId": "5a021977-717c-4aca-9cee-40da092c07e5",
+            "name": "Spokes-list",
+            "type": "site",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "siteId": "{{config.Spokes_site_id}}"
+                }
+            ],
+            "lastUpdated": 1588897226256,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 2,
+            "references": [
+                {
+                    "id": "aaad903a-00f4-458b-9d99-87cd96f04b6f",
+                    "type": ""
+                },
+                {
+                    "id": "69f09de1-2bd2-499d-857b-ca47eb2c4547",
+                    "type": "hubAndSpoke"
+                }
+            ],
+            "isActivatedByVsmart": false
+        },
+        {
+            "listId": "99728ec3-ac04-4fb1-af0a-0d410f75d578",
+            "name": "AAR-Sites-list",
+            "type": "site",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "siteId": "{{config.AAR_site_ids}}"
+                }
+            ],
+            "lastUpdated": 1589209673416,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 0,
+            "references": [],
+            "isActivatedByVsmart": false
+        },        
+        {
+            "listId": "c082e19b-3f4c-4895-a95d-9a3f6213a05d",
+            "name": "AnyIpv4PrefixList",
+            "type": "prefix",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "ipPrefix": "0.0.0.0/0",
+                    "le": "32"
+                }
+            ],
+            "lastUpdated": 1588897227974,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 0,
+            "references": [],
+            "isActivatedByVsmart": false
+        },
+        {
+            "listId": "98953ada-097e-44fa-a83e-3bdf4de1a3cc",
+            "name": "Audio-and-Video-SLA-Class",
+            "type": "sla",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "latency": "{{config.Latency}}",
+                    "loss": "{{config.Loss}}",
+                    "jitter": "{{config.Jitter}}"
+                }
+            ],
+            "lastUpdated": 1588525820662,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 1,
+            "references": [
+                {
+                    "id": "e6ba98d6-7148-4f8f-915b-0150904fada4",
+                    "type": "appRoute"
+                }
+            ],
+            "activatedId": [
+                "6a92a10b-2cd5-4ec1-bed3-43566f783968"
+            ],
+            "isActivatedByVsmart": true
+        },
+        {
+            "listId": "509d250c-383c-45bf-b9ac-f72d07ecd4f2",
+            "name": "audio-video-app-list",
+            "type": "app",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "appFamily": "audio-video"
+                }
+            ],
+            "lastUpdated": 1588525793600,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 1,
+            "references": [
+                {
+                    "id": "e6ba98d6-7148-4f8f-915b-0150904fada4",
+                    "type": "appRoute"
+                }
+            ],
+            "activatedId": [
+                "6a92a10b-2cd5-4ec1-bed3-43566f783968"
+            ],
+            "isActivatedByVsmart": true
+        },
+        {
+            "listId": "1e3fe4d1-7e30-483f-8266-c82968ff1909",
+            "name": "DC1-Site-list",
+            "type": "site",
+            "description": "Desc Not Required",
+            "entries": [
+                {
+                    "siteId": "{{config.DC1_site_id}}"
+                }
+            ],
+            "lastUpdated": 1588897227759,
+            "owner": "admin",
+            "readOnly": false,
+            "version": "0",
+            "infoTag": "",
+            "referenceCount": 4,
+            "references": [
+                {
+                    "id": "aaad903a-00f4-458b-9d99-87cd96f04b6f",
+                    "type": ""
+                },
+                {
+                    "id": "69f09de1-2bd2-499d-857b-ca47eb2c4547",
+                    "type": "hubAndSpoke"
+                },
+                {
+                    "id": "cf31a167-b75c-409a-9b87-3e27668911a2",
+                    "type": "control"
+                },
+                {
+                    "id": "1f0a6905-1747-4ca8-a621-766934a3e084",
+                    "type": "control"
+                }
+            ],
+            "isActivatedByVsmart": false
+        }
+    ],
+    "vmanage_policy_definitions": [
+        {
+            "definitionId": "c23780da-f90b-44ea-8fbe-afe4bd740ffc",
+            "name": "Block-DC1-to-DC2-Tunnels",
+            "type": "control",
+            "description": "Block-DC1-to-DC2-Tunnels",
+            "sequences": [
+                {
+                    "sequenceId": 1,
+                    "sequenceName": "TLOC",
+                    "baseAction": "reject",
+                    "sequenceType": "tloc",
+                    "sequenceIpType": "ipv4",
+                    "match": {
+                        "entries": [
+                            {
+                                "field": "siteList",
+                                "listName": "DC2-Site-list",
+                                "listType": "site"
+                            }
+                        ]
+                    },
+                    "actions": []
+                }
+            ],
+            "defaultAction": {
+                "type": "accept"
+            },
+            "lastUpdated": 1588897233937,
+            "owner": "admin",
+            "infoTag": "",
+            "referenceCount": 1,
+            "references": [
+                {
+                    "id": "aaad903a-00f4-458b-9d99-87cd96f04b6f",
+                    "property": "policyId"
+                }
+            ],
+            "isActivatedByVsmart": false
+        },
+        {
+            "definitionId": "cf31a167-b75c-409a-9b87-3e27668911a2",
+            "name": "Block-DC2-to-DC1-Tunnels",
+            "type": "control",
+            "description": "Block-DC2-to-DC1-Tunnels",
+            "sequences": [
+                {
+                    "sequenceId": 1,
+                    "sequenceName": "TLOC",
+                    "baseAction": "reject",
+                    "sequenceType": "tloc",
+                    "sequenceIpType": "ipv4",
+                    "match": {
+                        "entries": [
+                            {
+                                "field": "siteList",
+                                "listName": "DC1-Site-list",
+                                "listType": "site"
+                            }
+                        ]
+                    },
+                    "actions": []
+                }
+            ],
+            "defaultAction": {
+                "type": "accept"
+            },
+            "lastUpdated": 1588897233343,
+            "owner": "admin",
+            "infoTag": "",
+            "referenceCount": 1,
+            "references": [
+                {
+                    "id": "aaad903a-00f4-458b-9d99-87cd96f04b6f",
+                    "property": "policyId"
+                }
+            ],
+            "isActivatedByVsmart": false
+        },
+        {
+            "definitionId": "e6ba98d6-7148-4f8f-915b-0150904fada4",
+            "name": "Audio-Video-AAR-Policy",
+            "type": "appRoute",
+            "description": "Audio-Video-AAR-Policy",
+            "sequences": [
+                {
+                    "sequenceId": 1,
+                    "sequenceName": "App Route",
+                    "sequenceType": "appRoute",
+                    "sequenceIpType": "ipv4",
+                    "match": {
+                        "entries": [
+                            {
+                                "field": "appList",
+                                "listName": "audio-video-app-list",
+                                "listType": "app"
+                            }
+                        ]
+                    },
+                    "actions": [
+                        {
+                            "type": "slaClass",
+                            "parameter": [
+                                {
+                                    "field": "name",
+                                    "listName": "Audio-and-Video-SLA-Class",
+                                    "listType": "sla"
+                                },
+                                {
+                                    "field": "preferredColor",
+                                    "value": "{{config.pref_color}}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "backupSlaPreferredColor",
+                            "parameter": "{{config.backup_pref_color}}"
+                        }
+                    ]
+                }
+            ],
+            "lastUpdated": 1588560250044,
+            "owner": "admin",
+            "infoTag": "",
+            "referenceCount": 1,
+            "references": [
+                {
+                    "id": "6a92a10b-2cd5-4ec1-bed3-43566f783968"
+                }
+            ],
+            "activatedId": [
+                "6a92a10b-2cd5-4ec1-bed3-43566f783968"
+            ],
+            "isActivatedByVsmart": true
+        },
+        {
+            "definitionId": "1f0a6905-1747-4ca8-a621-766934a3e084",
+            "name": "DC1-Pref-over-DC2-Policy",
+            "type": "control",
+            "description": "DC1-Pref-over-DC2-Policy",
+            "sequences": [
+                {
+                    "sequenceId": 1,
+                    "sequenceName": "Route",
+                    "baseAction": "accept",
+                    "sequenceType": "route",
+                    "sequenceIpType": "ipv4",
+                    "match": {
+                        "entries": [
+                            {
+                                "field": "siteList",
+                                "listName": "DC1-Site-list",
+                                "listType": "site"
+                            }
+                        ]
+                    },
+                    "actions": [
+                        {
+                            "type": "set",
+                            "parameter": [
+                                {
+                                    "field": "preference",
+                                    "value": "100"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sequenceId": 11,
+                    "sequenceName": "Route",
+                    "baseAction": "accept",
+                    "sequenceType": "route",
+                    "sequenceIpType": "ipv4",
+                    "match": {
+                        "entries": [
+                            {
+                                "field": "siteList",
+                                "listName": "DC2-Site-list",
+                                "listType": "site"
+                            }
+                        ]
+                    },
+                    "actions": [
+                        {
+                            "type": "set",
+                            "parameter": [
+                                {
+                                    "field": "preference",
+                                    "value": "75"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sequenceId": 21,
+                    "sequenceName": "TLOC",
+                    "baseAction": "accept",
+                    "sequenceType": "tloc",
+                    "sequenceIpType": "ipv4",
+                    "match": {
+                        "entries": [
+                            {
+                                "field": "siteList",
+                                "listName": "DC1-Site-list",
+                                "listType": "site"
+                            }
+                        ]
+                    },
+                    "actions": []
+                },
+                {
+                    "sequenceId": 31,
+                    "sequenceName": "TLOC",
+                    "baseAction": "accept",
+                    "sequenceType": "tloc",
+                    "sequenceIpType": "ipv4",
+                    "match": {
+                        "entries": [
+                            {
+                                "field": "siteList",
+                                "listName": "DC2-Site-list",
+                                "listType": "site"
+                            }
+                        ]
+                    },
+                    "actions": []
+                }
+            ],
+            "defaultAction": {
+                "type": "reject"
+            },
+            "lastUpdated": 1588897232841,
+            "owner": "admin",
+            "infoTag": "",
+            "referenceCount": 1,
+            "references": [
+                {
+                    "id": "aaad903a-00f4-458b-9d99-87cd96f04b6f",
+                    "property": "policyId"
+                }
+            ],
+            "isActivatedByVsmart": false
+        }
+    ],
+    "vmanage_central_policies": [
+        {
+            "policyVersion": "05072020T172041573",
+            "lastUpdatedBy": "admin",
+            "policyName": "Corp-vSmart-Policy",
+            "policyDefinition": {
+                "assembly": [
+                    {
+                        "type": "appRoute",
+                        "entries": [
+                            {
+                                "siteLists": [
+                                    "AAR-Sites-list"
+                                ],
+                                "vpnLists": [
+                                    "Corp-VPN-List"
+                                ]
+                            }
+                        ],
+                        "definitionName": "Audio-Video-AAR-Policy"
+                    },
+                    {
+                        "type": "control",
+                        "entries": [
+                            {
+                                "direction": "out",
+                                "siteLists": [
+                                    "Spokes-list"
+                                ]
+                            }
+                        ],
+                        "definitionName": "DC1-Pref-over-DC2-Policy"
+                    },
+                    {
+                        "type": "control",
+                        "entries": [
+                            {
+                                "direction": "out",
+                                "siteLists": [
+                                    "DC2-Site-list"
+                                ]
+                            }
+                        ],
+                        "definitionName": "Block-DC2-to-DC1-Tunnels"
+                    },
+                    {
+                        "type": "control",
+                        "entries": [
+                            {
+                                "direction": "out",
+                                "siteLists": [
+                                    "DC1-Site-list"
+                                ]
+                            }
+                        ],
+                        "definitionName": "Block-DC1-to-DC2-Tunnels"
+                    }
+                ]
+            },
+            "createdOn": 1588897301253,
+            "isPolicyActivated": false,
+            "policyDescription": "Corp-vSmart-Policy",
+            "@rid": 6431,
+            "policyId": "aaad903a-00f4-458b-9d99-87cd96f04b6f",
+            "createdBy": "admin",
+            "policyType": "feature",
+            "lastUpdatedOn": 1588897301253
+        }
+    ],
+    "vmanage_local_policies": [
+    ]
+}
